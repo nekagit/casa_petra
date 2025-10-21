@@ -1,0 +1,83 @@
+{
+  "grid": {
+    "base": "grid gap-6",
+    "cols": {
+      "1": "grid-cols-1",
+      "2": "grid-cols-1 sm:grid-cols-2",
+      "3": "grid-cols-1 sm:grid-cols-2 lg:grid-cols-3",
+      "4": "grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4",
+      "5": "grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5",
+      "6": "grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-6"
+    },
+    "gap": {
+      "sm": "gap-2",
+      "md": "gap-4",
+      "lg": "gap-6",
+      "xl": "gap-8"
+    }
+  },
+  "filters": {
+    "container": "flex flex-wrap items-center gap-4 mb-6",
+    "group": "flex flex-col space-y-1",
+    "label": "text-sm font-medium text-neutral-700",
+    "select": "px-3 py-2 text-sm border border-neutral-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-primary-500 bg-white min-w-32",
+    "button": "px-4 py-2 text-sm font-medium text-neutral-700 bg-white border border-neutral-300 rounded-md hover:bg-neutral-50 transition-colors duration-200"
+  },
+  "toolbar": {
+    "container": "flex items-center justify-between mb-6",
+    "count": "text-sm text-neutral-600",
+    "viewToggle": {
+      "container": "flex items-center space-x-1",
+      "button": "p-2 text-neutral-400 hover:text-neutral-600 transition-colors duration-200",
+      "active": "text-primary-600 bg-primary-50 rounded-md"
+    },
+    "sort": {
+      "container": "flex items-center space-x-2",
+      "label": "text-sm font-medium text-neutral-700",
+      "select": "px-3 py-2 text-sm border border-neutral-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-primary-500 bg-white"
+    }
+  },
+  "list": {
+    "container": "space-y-4",
+    "item": "flex items-center space-x-4 p-4 bg-white border border-neutral-200 rounded-lg hover:shadow-md transition-shadow duration-200",
+    "image": {
+      "container": "w-20 h-20 bg-neutral-100 rounded-md overflow-hidden flex-shrink-0",
+      "img": "w-full h-full object-cover"
+    },
+    "content": {
+      "container": "flex-1 min-w-0",
+      "title": "text-sm font-medium text-neutral-900 truncate",
+      "description": "text-sm text-neutral-600 mt-1 line-clamp-2",
+      "price": "text-sm font-semibold text-neutral-900 mt-1"
+    },
+    "actions": {
+      "container": "flex items-center space-x-2",
+      "button": "px-3 py-1.5 text-xs font-medium text-primary-600 bg-primary-50 rounded-md hover:bg-primary-100 transition-colors duration-200"
+    }
+  },
+  "pagination": {
+    "container": "flex items-center justify-center space-x-1 mt-8",
+    "item": "px-3 py-2 text-sm font-medium text-neutral-700 bg-white border border-neutral-300 rounded-md hover:bg-neutral-50 hover:text-primary-600 transition-colors duration-200",
+    "active": "bg-primary-600 text-white border-primary-600 hover:bg-primary-700",
+    "disabled": "opacity-50 cursor-not-allowed hover:bg-white hover:text-neutral-700",
+    "prev": "px-3 py-2 text-sm font-medium text-neutral-700 bg-white border border-neutral-300 rounded-l-md hover:bg-neutral-50",
+    "next": "px-3 py-2 text-sm font-medium text-neutral-700 bg-white border border-neutral-300 rounded-r-md hover:bg-neutral-50",
+    "ellipsis": "px-3 py-2 text-sm text-neutral-500"
+  },
+  "empty": {
+    "container": "text-center py-12",
+    "icon": "w-12 h-12 text-neutral-400 mx-auto mb-4",
+    "title": "text-lg font-medium text-neutral-900 mb-2",
+    "description": "text-sm text-neutral-600 mb-6",
+    "button": "inline-flex items-center px-4 py-2 text-sm font-medium text-white bg-primary-600 rounded-md hover:bg-primary-700 transition-colors duration-200"
+  },
+  "loading": {
+    "container": "grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6",
+    "skeleton": "bg-white border border-neutral-200 rounded-lg overflow-hidden",
+    "image": "w-full h-48 bg-neutral-200 animate-pulse",
+    "content": "p-4 space-y-3",
+    "title": "h-4 bg-neutral-200 rounded animate-pulse",
+    "price": "h-4 w-20 bg-neutral-200 rounded animate-pulse",
+    "button": "h-8 w-full bg-neutral-200 rounded animate-pulse"
+  }
+}

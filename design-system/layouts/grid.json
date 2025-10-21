@@ -1,0 +1,159 @@
+{
+  "container": {
+    "base": "w-full mx-auto px-4",
+    "sizes": {
+      "sm": "max-w-screen-sm",
+      "md": "max-w-screen-md", 
+      "lg": "max-w-screen-lg",
+      "xl": "max-w-screen-xl",
+      "2xl": "max-w-screen-2xl",
+      "3xl": "max-w-7xl",
+      "4xl": "max-w-8xl",
+      "full": "max-w-full"
+    },
+    "padding": {
+      "none": "px-0",
+      "sm": "px-2",
+      "md": "px-4",
+      "lg": "px-6",
+      "xl": "px-8"
+    }
+  },
+  "grid": {
+    "base": "grid",
+    "cols": {
+      "1": "grid-cols-1",
+      "2": "grid-cols-2",
+      "3": "grid-cols-3",
+      "4": "grid-cols-4",
+      "5": "grid-cols-5",
+      "6": "grid-cols-6",
+      "12": "grid-cols-12",
+      "auto": "grid-cols-[repeat(auto-fit,minmax(0,1fr))]",
+      "auto-sm": "grid-cols-[repeat(auto-fit,minmax(16rem,1fr))]",
+      "auto-md": "grid-cols-[repeat(auto-fit,minmax(20rem,1fr))]",
+      "auto-lg": "grid-cols-[repeat(auto-fit,minmax(24rem,1fr))]"
+    },
+    "responsive": {
+      "1": "grid-cols-1",
+      "2": "grid-cols-1 sm:grid-cols-2",
+      "3": "grid-cols-1 sm:grid-cols-2 lg:grid-cols-3",
+      "4": "grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4",
+      "5": "grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5",
+      "6": "grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-6"
+    },
+    "gap": {
+      "0": "gap-0",
+      "1": "gap-1",
+      "2": "gap-2",
+      "3": "gap-3",
+      "4": "gap-4",
+      "5": "gap-5",
+      "6": "gap-6",
+      "8": "gap-8",
+      "10": "gap-10",
+      "12": "gap-12"
+    },
+    "gapX": {
+      "0": "gap-x-0",
+      "1": "gap-x-1",
+      "2": "gap-x-2",
+      "3": "gap-x-3",
+      "4": "gap-x-4",
+      "5": "gap-x-5",
+      "6": "gap-x-6",
+      "8": "gap-x-8"
+    },
+    "gapY": {
+      "0": "gap-y-0",
+      "1": "gap-y-1",
+      "2": "gap-y-2",
+      "3": "gap-y-3",
+      "4": "gap-y-4",
+      "5": "gap-y-5",
+      "6": "gap-y-6",
+      "8": "gap-y-8"
+    }
+  },
+  "flex": {
+    "base": "flex",
+    "direction": {
+      "row": "flex-row",
+      "col": "flex-col",
+      "rowReverse": "flex-row-reverse",
+      "colReverse": "flex-col-reverse"
+    },
+    "wrap": {
+      "nowrap": "flex-nowrap",
+      "wrap": "flex-wrap",
+      "wrapReverse": "flex-wrap-reverse"
+    },
+    "justify": {
+      "start": "justify-start",
+      "end": "justify-end",
+      "center": "justify-center",
+      "between": "justify-between",
+      "around": "justify-around",
+      "evenly": "justify-evenly"
+    },
+    "align": {
+      "start": "items-start",
+      "end": "items-end",
+      "center": "items-center",
+      "baseline": "items-baseline",
+      "stretch": "items-stretch"
+    },
+    "grow": {
+      "0": "flex-grow-0",
+      "1": "flex-grow"
+    },
+    "shrink": {
+      "0": "flex-shrink-0",
+      "1": "flex-shrink"
+    }
+  },
+  "spacing": {
+    "margin": {
+      "auto": "mx-auto",
+      "0": "m-0",
+      "1": "m-1",
+      "2": "m-2",
+      "3": "m-3",
+      "4": "m-4",
+      "5": "m-5",
+      "6": "m-6",
+      "8": "m-8"
+    },
+    "padding": {
+      "0": "p-0",
+      "1": "p-1",
+      "2": "p-2",
+      "3": "p-3",
+      "4": "p-4",
+      "5": "p-5",
+      "6": "p-6",
+      "8": "p-8"
+    }
+  },
+  "breakpoints": {
+    "mobile": {
+      "max": "max-w-sm",
+      "container": "px-4"
+    },
+    "tablet": {
+      "min": "sm:min-w-md",
+      "max": "sm:max-w-md",
+      "container": "sm:px-6"
+    },
+    "desktop": {
+      "min": "lg:min-w-lg",
+      "max": "lg:max-w-lg", 
+      "container": "lg:px-8"
+    },
+    "wide": {
+      "min": "xl:min-w-xl",
+      "max": "xl:max-w-xl",
+      "container": "xl:px-12"
+    }
+  }
+}

@@ -1,0 +1,74 @@
+{
+  "header": {
+    "base": "bg-white shadow-sm border-b border-neutral-200 sticky top-0 z-40",
+    "container": "max-w-7xl mx-auto px-4 sm:px-6 lg:px-8",
+    "content": "flex items-center justify-between h-16"
+  },
+  "logo": {
+    "container": "flex items-center space-x-2",
+    "icon": "w-8 h-8 text-primary-600",
+    "text": "text-xl font-bold text-neutral-900",
+    "tagline": "text-xs text-neutral-600 uppercase tracking-wider"
+  },
+  "nav": {
+    "desktop": {
+      "base": "hidden md:flex items-center space-x-8",
+      "link": "text-sm font-medium text-neutral-700 hover:text-primary-600 transition-colors duration-200 relative",
+      "active": "text-primary-600",
+      "activeIndicator": "absolute -bottom-1 left-0 right-0 h-0.5 bg-primary-600"
+    },
+    "mobile": {
+      "base": "md:hidden",
+      "button": "text-neutral-700 hover:text-primary-600 p-2 rounded-md",
+      "menu": "absolute top-full left-0 right-0 bg-white shadow-lg border-t border-neutral-200 transform transition-transform duration-200",
+      "menuOpen": "translate-y-0",
+      "menuClosed": "-translate-y-full",
+      "link": "block px-4 py-3 text-sm font-medium text-neutral-700 hover:text-primary-600 hover:bg-neutral-50 border-b border-neutral-100 last:border-b-0",
+      "active": "text-primary-600 bg-primary-50"
+    }
+  },
+  "actions": {
+    "container": "flex items-center space-x-2",
+    "button": "p-2 text-neutral-700 hover:text-primary-600 transition-colors duration-200 relative",
+    "cart": {
+      "button": "p-2 text-neutral-700 hover:text-primary-600 transition-colors duration-200 relative",
+      "badge": "absolute -top-1 -right-1 bg-error-500 text-white text-xs rounded-full h-5 w-5 flex items-center justify-center font-semibold",
+      "count": "text-xs"
+    }
+  },
+  "breadcrumb": {
+    "base": "flex items-center space-x-2 text-sm text-neutral-600 py-4",
+    "item": "flex items-center",
+    "link": "text-neutral-600 hover:text-primary-600 transition-colors duration-200",
+    "active": "text-neutral-900 font-medium",
+    "separator": "text-neutral-400 mx-1",
+    "home": "text-neutral-600 hover:text-primary-600"
+  },
+  "pagination": {
+    "base": "flex items-center justify-center space-x-1",
+    "item": "px-3 py-2 text-sm font-medium text-neutral-700 bg-white border border-neutral-300 rounded-md hover:bg-neutral-50 hover:text-primary-600 transition-colors duration-200",
+    "active": "bg-primary-600 text-white border-primary-600 hover:bg-primary-700",
+    "disabled": "opacity-50 cursor-not-allowed hover:bg-white hover:text-neutral-700",
+    "prev": "px-3 py-2 text-sm font-medium text-neutral-700 bg-white border border-neutral-300 rounded-l-md hover:bg-neutral-50",
+    "next": "px-3 py-2 text-sm font-medium text-neutral-700 bg-white border border-neutral-300 rounded-r-md hover:bg-neutral-50"
+  },
+  "tabs": {
+    "base": "border-b border-neutral-200",
+    "list": "flex space-x-8",
+    "item": "py-2 px-1 text-sm font-medium text-neutral-500 hover:text-neutral-700 hover:border-neutral-300 transition-colors duration-200 border-b-2 border-transparent",
+    "active": "text-primary-600 border-primary-600",
+    "disabled": "opacity-50 cursor-not-allowed"
+  },
+  "sidebar": {
+    "base": "fixed inset-y-0 left-0 z-50 w-64 bg-white shadow-lg transform transition-transform duration-300",
+    "open": "translate-x-0",
+    "closed": "-translate-x-full",
+    "overlay": "fixed inset-0 bg-black/50 z-40",
+    "header": "flex items-center justify-between p-4 border-b border-neutral-200",
+    "title": "text-lg font-semibold text-neutral-900",
+    "closeButton": "p-2 text-neutral-400 hover:text-neutral-600",
+    "nav": "p-4 space-y-2",
+    "link": "block px-3 py-2 text-sm font-medium text-neutral-700 hover:text-primary-600 hover:bg-neutral-50 rounded-md transition-colors duration-200",
+    "active": "text-primary-600 bg-primary-50"
+  }
+}
