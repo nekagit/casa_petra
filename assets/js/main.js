@@ -69,12 +69,13 @@ function initializeModals() {
     const declineBtn = document.getElementById('declineBtn');
     
     if (newsletterModal) {
-        // Show modal after delay
-        setTimeout(() => {
-            if (!localStorage.getItem('newsletterShown')) {
-                newsletterModal.classList.add('active');
-            }
-        }, 2000);
+        // Newsletter modal is disabled by default
+        // Uncomment the lines below to enable auto-show functionality
+        // setTimeout(() => {
+        //     if (!localStorage.getItem('newsletterShown')) {
+        //         newsletterModal.classList.add('active');
+        //     }
+        // }, 2000);
         
         // Close modal
         if (closeModalBtn) {

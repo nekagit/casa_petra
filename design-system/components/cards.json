@@ -1,0 +1,79 @@
+{
+  "base": {
+    "card": "bg-white rounded-lg shadow-sm border border-neutral-200 overflow-hidden transition-all duration-200",
+    "hover": "hover:shadow-md hover:-translate-y-1",
+    "focus": "focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2"
+  },
+  "variants": {
+    "default": "bg-white border-neutral-200",
+    "elevated": "bg-white border-neutral-200 shadow-lg",
+    "outlined": "bg-white border-2 border-neutral-300",
+    "filled": "bg-neutral-50 border-neutral-200",
+    "bordered": "bg-white border border-neutral-300"
+  },
+  "sizes": {
+    "sm": "p-3",
+    "md": "p-4",
+    "lg": "p-6",
+    "xl": "p-8"
+  },
+  "header": {
+    "base": "px-4 py-3 border-b border-neutral-200 bg-neutral-50",
+    "title": "text-lg font-semibold text-neutral-900",
+    "subtitle": "text-sm text-neutral-600 mt-1"
+  },
+  "body": {
+    "base": "p-4",
+    "title": "text-base font-medium text-neutral-900 mb-2",
+    "content": "text-sm text-neutral-600"
+  },
+  "footer": {
+    "base": "px-4 py-3 border-t border-neutral-200 bg-neutral-50",
+    "actions": "flex justify-end space-x-2"
+  },
+  "product": {
+    "base": "group relative bg-white rounded-lg shadow-sm border border-neutral-200 overflow-hidden transition-all duration-300 cursor-pointer",
+    "hover": "hover:shadow-lg hover:-translate-y-2",
+    "image": {
+      "container": "relative w-full h-48 bg-neutral-100 overflow-hidden",
+      "img": "w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+    },
+    "badge": {
+      "base": "absolute top-2 left-2 z-10 px-2 py-1 text-xs font-semibold rounded-md",
+      "sale": "bg-error-500 text-white",
+      "new": "bg-success-500 text-white",
+      "featured": "bg-primary-500 text-white"
+    },
+    "actions": {
+      "container": "absolute top-2 right-2 z-10 flex flex-col space-y-1 opacity-0 group-hover:opacity-100 transition-opacity duration-200",
+      "button": "w-8 h-8 bg-white rounded-full shadow-md flex items-center justify-center text-neutral-600 hover:text-primary-600 hover:bg-primary-50 transition-colors duration-200"
+    },
+    "content": {
+      "container": "p-4",
+      "title": "text-sm font-medium text-neutral-900 mb-1 line-clamp-2",
+      "price": {
+        "container": "flex items-center space-x-2 mb-2",
+        "current": "text-lg font-bold text-neutral-900",
+        "original": "text-sm text-neutral-500 line-through"
+      },
+      "rating": {
+        "container": "flex items-center space-x-1 mb-3",
+        "stars": "text-yellow-400 text-sm",
+        "count": "text-xs text-neutral-500"
+      }
+    }
+  },
+  "category": {
+    "base": "group relative h-64 rounded-lg overflow-hidden cursor-pointer transition-transform duration-300",
+    "hover": "hover:scale-105",
+    "image": {
+      "container": "absolute inset-0",
+      "img": "w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
+    },
+    "overlay": "absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent",
+    "content": {
+      "container": "absolute bottom-0 left-0 right-0 p-4 text-white",
+      "title": "text-xl font-bold mb-1"
+    }
+  }
+}

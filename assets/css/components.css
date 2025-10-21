@@ -273,15 +273,15 @@
     line-height: 1.5;
     color: var(--dark);
     background-color: var(--white);
-    border: 2px solid var(--gray-light);
-    border-radius: var(--radius-sm);
+    border: 1px solid #e0e0e0;
+    border-radius: 6px;
     transition: border-color var(--transition-fast);
 }
 
 .form-control:focus {
     outline: none;
     border-color: var(--primary);
-    box-shadow: 0 0 0 3px rgba(212, 196, 168, 0.1);
+    box-shadow: 0 0 0 2px rgba(201, 169, 97, 0.1);
 }
 
 .form-control.is-invalid {
@@ -433,6 +433,114 @@
     display: flex;
     gap: var(--spacing-sm);
     justify-content: flex-end;
+}
+
+/* Newsletter Modal Specific Styles */
+.newsletter-modal .modal {
+    max-width: 450px;
+    padding: 0;
+}
+
+.newsletter-modal .modal-header {
+    padding: 2rem 2rem 1rem 2rem;
+    border-bottom: none;
+    text-align: center;
+}
+
+.newsletter-modal .modal-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--dark);
+    margin-bottom: 0.5rem;
+    line-height: 1.3;
+}
+
+.newsletter-modal .modal-body {
+    padding: 0 2rem 2rem 2rem;
+}
+
+.newsletter-modal .modal-body p {
+    text-align: center;
+    margin-bottom: 1.5rem;
+    color: var(--gray-medium);
+    font-size: 0.95rem;
+    line-height: 1.4;
+}
+
+.newsletter-modal .form-group {
+    margin-bottom: 1rem;
+}
+
+.newsletter-modal .form-control {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    border: 1px solid #e0e0e0;
+    border-radius: 6px;
+    font-size: 0.95rem;
+    background-color: var(--white);
+    transition: border-color var(--transition-fast);
+}
+
+.newsletter-modal .form-control:focus {
+    outline: none;
+    border-color: var(--primary);
+    box-shadow: 0 0 0 2px rgba(201, 169, 97, 0.1);
+}
+
+.newsletter-modal .btn-primary {
+    width: 100%;
+    background-color: var(--primary);
+    color: var(--white);
+    border: none;
+    padding: 0.875rem 1.5rem;
+    border-radius: 6px;
+    font-size: 1rem;
+    font-weight: 600;
+    margin-bottom: 0.75rem;
+    transition: background-color var(--transition-fast);
+}
+
+.newsletter-modal .btn-primary:hover {
+    background-color: var(--secondary);
+}
+
+.newsletter-modal .btn-ghost {
+    width: 100%;
+    background: none;
+    border: none;
+    color: var(--gray-medium);
+    font-size: 0.9rem;
+    text-decoration: underline;
+    cursor: pointer;
+    padding: 0.5rem;
+    transition: color var(--transition-fast);
+}
+
+.newsletter-modal .btn-ghost:hover {
+    color: var(--dark);
+}
+
+.klaviyo-attribution {
+    text-align: center;
+    margin-top: 1.5rem;
+    padding-top: 1rem;
+    border-top: 1px solid #f0f0f0;
+}
+
+.klaviyo-attribution p {
+    font-size: 0.8rem;
+    color: var(--gray-medium);
+    margin: 0;
+}
+
+.klaviyo-attribution a {
+    color: var(--primary);
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.klaviyo-attribution a:hover {
+    text-decoration: underline;
 }
 
 /* Alerts */
