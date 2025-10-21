@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kasse | Casa-Petrada</title>
+    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="assets/css/components.css">
+    <link rel="stylesheet" href="assets/css/pages.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Top Banner -->
+    <div class="top-banner">
+        <p>Versandkostenfrei ab einem Bestellwert von 39,90 €</p>
+    </div>
+
+    <!-- Header -->
+    <header class="main-header">
+        <div class="container">
+            <div class="header-content">
+                <!-- Logo -->
+                <div class="logo">
+                    <div class="logo-crown">👑</div>
+                    <h1>CASA-PETRADA</h1>
+                    <p class="tagline">MODE & ACCESSOIRES</p>
+                </div>
+
+                <!-- Navigation -->
+                <nav class="main-nav">
+                    <ul>
+                        <li><a href="products/bracelets.html">Armbänder</a></li>
+                        <li><a href="products/necklaces.html">Ketten</a></li>
+                        <li><a href="products/anklets.html">Fußkettchen</a></li>
+                        <li><a href="products/fashion-jewelry.html">Modeschmuck</a></li>
+                        <li><a href="products/fashion.html">Fashion</a></li>
+                        <li><a href="products/bags.html">Taschen</a></li>
+                        <li><a href="products/sale.html">SALE</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="about.html">Über mich</a></li>
+                    </ul>
+                </nav>
+
+                <!-- Header Icons -->
+                <div class="header-icons">
+                    <button class="icon-btn search-btn" title="Suchen">🔍</button>
+                    <button class="icon-btn user-btn" title="Benutzerkonto">👤</button>
+                    <button class="icon-btn cart-btn" title="Warenkorb">
+                        🛍️
+                        <span class="cart-count">0</span>
+                    </button>
+                </div>
+
+                <!-- Mobile Menu Toggle -->
+                <button class="mobile-menu-toggle">☰</button>
+            </div>
+
+            <!-- Mobile Menu -->
+            <div class="mobile-menu">
+                <ul>
+                    <li><a href="products/bracelets.html">Armbänder</a></li>
+                    <li><a href="products/necklaces.html">Ketten</a></li>
+                    <li><a href="products/anklets.html">Fußkettchen</a></li>
+                    <li><a href="products/fashion-jewelry.html">Modeschmuck</a></li>
+                    <li><a href="products/fashion.html">Fashion</a></li>
+                    <li><a href="products/bags.html">Taschen</a></li>
+                    <li><a href="products/sale.html">SALE</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="about.html">Über mich</a></li>
+                </ul>
+            </div>
+        </div>
+    </header>
+
+    <!-- Breadcrumb -->
+    <div class="container">
+        <nav class="breadcrumb">
+            <div class="breadcrumb-item"><a href="index.html">Start</a></div>
+            <div class="breadcrumb-item"><a href="cart.html">Warenkorb</a></div>
+            <div class="breadcrumb-item active">Kasse</div>
+        </nav>
+    </div>
+
+    <!-- Checkout Page -->
+    <section class="checkout-page" style="padding: 2rem 0;">
+        <div class="container">
+            <h1>Kasse</h1>
+            
+            <div class="row">
+                <!-- Checkout Form -->
+                <div class="col" style="flex: 2;">
+                    <form class="checkout-form" data-validate>
+                        <!-- Step 1: Shipping Information -->
+                        <div class="checkout-step active" id="step1">
+                            <div class="card">
+                                <div class="card-header">
+                                    <h3>1. Lieferadresse</h3>
+                                </div>
+                                <div class="card-body">
+                                    <div class="row">
+                                        <div class="col">
+                                            <div class="form-group">
+                                                <label for="firstName" class="form-label">Vorname *</label>
+                                                <input type="text" id="firstName" name="firstName" class="form-control" required>
+                                            </div>
+                                        </div>
+                                        <div class="col">
+                                            <div class="form-group">
+                                                <label for="lastName" class="form-label">Nachname *</label>
+                                                <input type="text" id="lastName" name="lastName" class="form-control" required>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="form-group">
+                                        <label for="email" class="form-label">E-Mail-Adresse *</label>
+                                        <input type="email" id="email" name="email" class="form-control" required>
+                                    </div>
+                                    
+                                    <div class="form-group">
+                                        <label for="phone" class="form-label">Telefonnummer</label>
+                                        <input type="tel" id="phone" name="phone" class="form-control">
+                                    </div>
+                                    
+                                    <div class="form-group">
+                                        <label for="address" class="form-label">Straße und Hausnummer *</label>
+                                        <input type="text" id="address" name="address" class="form-control" required>
+                                    </div>
+                                    
+                                    <div class="row">
+                                        <div class="col">
+                                            <div class="form-group">
+                                                <label for="zipCode" class="form-label">PLZ *</label>
+                                                <input type="text" id="zipCode" name="zipCode" class="form-control" data-pattern="^[0-9]{5}$" data-pattern-message="Bitte geben Sie eine gültige Postleitzahl ein" required>
+                                            </div>
+                                        </div>
+                                        <div class="col">
+                                            <div class="form-group">
+                                                <label for="city" class="form-label">Stadt *</label>
+                                                <input type="text" id="city" name="city" class="form-control" required>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="form-group">
+                                        <label for="country" class="form-label">Land *</label>
+                                        <select id="country" name="country" class="form-control" required>
+                                            <option value="">Bitte wählen</option>
+                                            <option value="DE">Deutschland</option>
+                                            <option value="AT">Österreich</option>
+                                            <option value="CH">Schweiz</option>
+                                        </select>
+                                    </div>
+                                    
+                                    <div class="form-check">
+                                        <input type="checkbox" id="billingSame" name="billingSame" class="form-check-input">
+                                        <label for="billingSame" class="form-check-label">
+                                            Rechnungsadresse ist identisch mit Lieferadresse
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Step 2: Payment Information -->
+                        <div class="checkout-step" id="step2">
+                            <div class="card">
+                                <div class="card-header">
+                                    <h3>2. Zahlungsart</h3>
+                                </div>
+                                <div class="card-body">
+                                    <div class="form-group">
+                                        <div class="form-check">
+                                            <input type="radio" id="payment-card" name="payment" value="card" class="form-check-input" required>
+                                            <label for="payment-card" class="form-check-label">
+                                                <strong>Kreditkarte</strong><br>
+                                                <small>Visa, Mastercard, American Express</small>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="form-group">
+                                        <div class="form-check">
+                                            <input type="radio" id="payment-paypal" name="payment" value="paypal" class="form-check-input" required>
+                                            <label for="payment-paypal" class="form-check-label">
+                                                <strong>PayPal</strong><br>
+                                                <small>Schnell und sicher bezahlen</small>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="form-group">
+                                        <div class="form-check">
+                                            <input type="radio" id="payment-sepa" name="payment" value="sepa" class="form-check-input" required>
+                                            <label for="payment-sepa" class="form-check-label">
+                                                <strong>SEPA-Lastschrift</strong><br>
+                                                <small>Direkt von Ihrem Bankkonto</small>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="form-group">
+                                        <div class="form-check">
+                                            <input type="radio" id="payment-vorkasse" name="payment" value="vorkasse" class="form-check-input" required>
+                                            <label for="payment-vorkasse" class="form-check-label">
+                                                <strong>Vorkasse</strong><br>
+                                                <small>Überweisung vor Versand</small>
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Step 3: Review & Confirm -->
+                        <div class="checkout-step" id="step3">
+                            <div class="card">
+                                <div class="card-header">
+                                    <h3>3. Bestellung bestätigen</h3>
+                                </div>
+                                <div class="card-body">
+                                    <div class="form-check">
+                                        <input type="checkbox" id="terms" name="terms" class="form-check-input" required>
+                                        <label for="terms" class="form-check-label">
+                                            Ich habe die <a href="terms.html" target="_blank">Allgemeinen Geschäftsbedingungen</a> gelesen und akzeptiere sie. *
+                                        </label>
+                                    </div>
+                                    
+                                    <div class="form-check">
+                                        <input type="checkbox" id="privacy" name="privacy" class="form-check-input" required>
+                                        <label for="privacy" class="form-check-label">
+                                            Ich habe die <a href="privacy.html" target="_blank">Datenschutzerklärung</a> gelesen und stimme der Verarbeitung meiner Daten zu. *
+                                        </label>
+                                    </div>
+                                    
+                                    <div class="form-check">
+                                        <input type="checkbox" id="newsletter" name="newsletter" class="form-check-input">
+                                        <label for="newsletter" class="form-check-label">
+                                            Ich möchte den Newsletter mit exklusiven Angeboten erhalten.
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Navigation Buttons -->
+                        <div class="checkout-navigation">
+                            <button type="button" class="btn btn-outline" id="prevBtn" style="display: none;">Zurück</button>
+                            <button type="button" class="btn btn-primary" id="nextBtn">Weiter</button>
+                            <button type="submit" class="btn btn-primary" id="submitBtn" style="display: none;">Bestellung abschließen</button>
+                        </div>
+                    </form>
+                </div>
+
+                <!-- Order Summary -->
+                <div class="col" style="flex: 1;">
+                    <div class="card" style="position: sticky; top: 2rem;">
+                        <div class="card-header">
+                            <h3>Bestellübersicht</h3>
+                        </div>
+                        <div class="card-body">
+                            <div class="order-items">
+                                <!-- Order items will be populated by JavaScript -->
+                            </div>
+                            
+                            <div class="order-summary">
+                                <div class="order-summary-row">
+                                    <span>Zwischensumme</span>
+                                    <span id="subtotal">0,00 €</span>
+                                </div>
+                                <div class="order-summary-row">
+                                    <span>Versand</span>
+                                    <span id="shipping">4,90 €</span>
+                                </div>
+                                <div class="order-summary-total">
+                                    <span>Gesamt</span>
+                                    <span id="total">4,90 €</span>
+                                </div>
+                            </div>
+                            
+                            <div class="order-security">
+                                <p><strong>🔒 Sichere Zahlung</strong></p>
+                                <p>Ihre Daten werden verschlüsselt übertragen und sicher verarbeitet.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Shop</h3>
+                    <ul>
+                        <li><a href="products/bracelets.html">Armbänder</a></li>
+                        <li><a href="products/necklaces.html">Ketten</a></li>
+                        <li><a href="products/anklets.html">Fußkettchen</a></li>
+                        <li><a href="products/fashion-jewelry.html">Modeschmuck</a></li>
+                        <li><a href="products/bags.html">Taschen</a></li>
+                        <li><a href="products/sale.html">SALE</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Service</h3>
+                    <ul>
+                        <li><a href="shipping.html">Versand</a></li>
+                        <li><a href="returns.html">Rückgabe</a></li>
+                        <li><a href="size-guide.html">Größentabelle</a></li>
+                        <li><a href="contact.html">Kontakt</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Unternehmen</h3>
+                    <ul>
+                        <li><a href="about.html">Über uns</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="privacy.html">Datenschutz</a></li>
+                        <li><a href="terms.html">Impressum</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Newsletter</h3>
+                    <p>Bleibe auf dem Laufenden über neue Kollektionen und exklusive Angebote.</p>
+                    <form class="newsletter-form" data-validate>
+                        <input type="email" name="email" placeholder="E-Mail-Adresse" class="form-control" required>
+                        <button type="submit" class="btn btn-primary btn-sm" style="width: 100%; margin-top: 0.5rem;">Anmelden</button>
+                    </form>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Casa-Petrada. Alle Rechte vorbehalten.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Cookie Banner -->
+    <div class="cookie-banner">
+        <div class="cookie-left">
+            <span>Lass dir nichts entgehen!</span>
+            <button class="cookie-close">&times;</button>
+        </div>
+        <div class="cookie-center">
+            <p>Diese Website verwendet Cookies, um dir das beste Erlebnis zu bieten. <a href="privacy.html">Datenschutz</a> | <a href="terms.html">Impressum</a></p>
+        </div>
+        <div class="cookie-right">
+            <button class="cookie-btn decline" onclick="declineCookies()">Ablehnen</button>
+            <button class="cookie-btn accept" onclick="acceptCookies()">Annehmen</button>
+        </div>
+    </div>
+
+    <!-- Back to Top Button -->
+    <button class="back-to-top" title="Nach oben">↑</button>
+
+    <!-- Scripts -->
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/cart.js"></script>
+    <script src="assets/js/products.js"></script>
+    <script src="assets/js/form-validation.js"></script>
+    
+    <!-- Checkout specific JavaScript -->
+    <script>
+        // Checkout step management
+        let currentStep = 1;
+        const totalSteps = 3;
+        
+        document.addEventListener('DOMContentLoaded', function() {
+            initializeCheckout();
+        });
+        
+        function initializeCheckout() {
+            const nextBtn = document.getElementById('nextBtn');
+            const prevBtn = document.getElementById('prevBtn');
+            const submitBtn = document.getElementById('submitBtn');
+            
+            nextBtn.addEventListener('click', nextStep);
+            prevBtn.addEventListener('click', prevStep);
+            submitBtn.addEventListener('click', submitOrder);
+            
+            updateOrderSummary();
+        }
+        
+        function nextStep() {
+            if (validateCurrentStep()) {
+                if (currentStep < totalSteps) {
+                    document.getElementById(`step${currentStep}`).classList.remove('active');
+                    currentStep++;
+                    document.getElementById(`step${currentStep}`).classList.add('active');
+                    updateNavigationButtons();
+                }
+            }
+        }
+        
+        function prevStep() {
+            if (currentStep > 1) {
+                document.getElementById(`step${currentStep}`).classList.remove('active');
+                currentStep--;
+                document.getElementById(`step${currentStep}`).classList.add('active');
+                updateNavigationButtons();
+            }
+        }
+        
+        function updateNavigationButtons() {
+            const nextBtn = document.getElementById('nextBtn');
+            const prevBtn = document.getElementById('prevBtn');
+            const submitBtn = document.getElementById('submitBtn');
+            
+            prevBtn.style.display = currentStep > 1 ? 'inline-block' : 'none';
+            
+            if (currentStep === totalSteps) {
+                nextBtn.style.display = 'none';
+                submitBtn.style.display = 'inline-block';
+            } else {
+                nextBtn.style.display = 'inline-block';
+                submitBtn.style.display = 'none';
+            }
+        }
+        
+        function validateCurrentStep() {
+            const currentStepElement = document.getElementById(`step${currentStep}`);
+            const requiredFields = currentStepElement.querySelectorAll('[required]');
+            let isValid = true;
+            
+            requiredFields.forEach(field => {
+                if (!field.value.trim()) {
+                    field.classList.add('is-invalid');
+                    isValid = false;
+                } else {
+                    field.classList.remove('is-invalid');
+                }
+            });
+            
+            return isValid;
+        }
+        
+        function updateOrderSummary() {
+            const cart = JSON.parse(localStorage.getItem('cart')) || [];
+            const orderItems = document.querySelector('.order-items');
+            const subtotal = document.getElementById('subtotal');
+            const shipping = document.getElementById('shipping');
+            const total = document.getElementById('total');
+            
+            if (cart.length === 0) {
+                orderItems.innerHTML = '<p>Keine Artikel im Warenkorb</p>';
+                return;
+            }
+            
+            let subtotalAmount = 0;
+            orderItems.innerHTML = '';
+            
+            cart.forEach(item => {
+                const itemTotal = item.price * item.quantity;
+                subtotalAmount += itemTotal;
+                
+                const itemElement = document.createElement('div');
+                itemElement.className = 'order-item';
+                itemElement.innerHTML = `
+                    <div style="display: flex; justify-content: space-between; margin-bottom: 0.5rem;">
+                        <span>${item.name} x${item.quantity}</span>
+                        <span>${formatPrice(itemTotal)}</span>
+                    </div>
+                `;
+                orderItems.appendChild(itemElement);
+            });
+            
+            const shippingAmount = subtotalAmount >= 39.90 ? 0 : 4.90;
+            const totalAmount = subtotalAmount + shippingAmount;
+            
+            subtotal.textContent = formatPrice(subtotalAmount);
+            shipping.textContent = shippingAmount === 0 ? 'Kostenlos' : formatPrice(shippingAmount);
+            total.textContent = formatPrice(totalAmount);
+        }
+        
+        function submitOrder() {
+            if (validateCurrentStep()) {
+                // Simulate order processing
+                const submitBtn = document.getElementById('submitBtn');
+                submitBtn.disabled = true;
+                submitBtn.innerHTML = '<span class="spinner spinner-sm"></span> Wird verarbeitet...';
+                
+                setTimeout(() => {
+                    // Clear cart
+                    localStorage.removeItem('cart');
+                    
+                    // Redirect to success page
+                    window.location.href = 'order-success.html';
+                }, 2000);
+            }
+        }
+        
+        function formatPrice(price) {
+            return new Intl.NumberFormat('de-DE', {
+                style: 'currency',
+                currency: 'EUR'
+            }).format(price);
+        }
+    </script>
+</body>
+</html>

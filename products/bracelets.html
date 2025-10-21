@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Armbänder | Casa-Petrada</title>
+    <link rel="stylesheet" href="../assets/css/main.css">
+    <link rel="stylesheet" href="../assets/css/components.css">
+    <link rel="stylesheet" href="../assets/css/pages.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Top Banner -->
+    <div class="top-banner">
+        <p>Versandkostenfrei ab einem Bestellwert von 39,90 €</p>
+    </div>
+
+    <!-- Header -->
+    <header class="main-header">
+        <div class="container">
+            <div class="header-content">
+                <!-- Logo -->
+                <div class="logo">
+                    <div class="logo-crown">👑</div>
+                    <h1>CASA-PETRADA</h1>
+                    <p class="tagline">MODE & ACCESSOIRES</p>
+                </div>
+
+                <!-- Navigation -->
+                <nav class="main-nav">
+                    <ul>
+                        <li><a href="../products/bracelets.html" class="active">Armbänder</a></li>
+                        <li><a href="../products/necklaces.html">Ketten</a></li>
+                        <li><a href="../products/anklets.html">Fußkettchen</a></li>
+                        <li><a href="../products/fashion-jewelry.html">Modeschmuck</a></li>
+                        <li><a href="../products/fashion.html">Fashion</a></li>
+                        <li><a href="../products/bags.html">Taschen</a></li>
+                        <li><a href="../products/sale.html">SALE</a></li>
+                        <li><a href="../blog.html">Blog</a></li>
+                        <li><a href="../about.html">Über mich</a></li>
+                    </ul>
+                </nav>
+
+                <!-- Header Icons -->
+                <div class="header-icons">
+                    <button class="icon-btn search-btn" title="Suchen">🔍</button>
+                    <button class="icon-btn user-btn" title="Benutzerkonto">👤</button>
+                    <button class="icon-btn cart-btn" title="Warenkorb">
+                        🛍️
+                        <span class="cart-count">0</span>
+                    </button>
+                </div>
+
+                <!-- Mobile Menu Toggle -->
+                <button class="mobile-menu-toggle">☰</button>
+            </div>
+
+            <!-- Mobile Menu -->
+            <div class="mobile-menu">
+                <ul>
+                    <li><a href="../products/bracelets.html" class="active">Armbänder</a></li>
+                    <li><a href="../products/necklaces.html">Ketten</a></li>
+                    <li><a href="../products/anklets.html">Fußkettchen</a></li>
+                    <li><a href="../products/fashion-jewelry.html">Modeschmuck</a></li>
+                    <li><a href="../products/fashion.html">Fashion</a></li>
+                    <li><a href="../products/bags.html">Taschen</a></li>
+                    <li><a href="../products/sale.html">SALE</a></li>
+                    <li><a href="../blog.html">Blog</a></li>
+                    <li><a href="../about.html">Über mich</a></li>
+                </ul>
+            </div>
+        </div>
+    </header>
+
+    <!-- Breadcrumb -->
+    <div class="container">
+        <nav class="breadcrumb">
+            <div class="breadcrumb-item"><a href="../index.html">Start</a></div>
+            <div class="breadcrumb-item active">Armbänder</div>
+        </nav>
+    </div>
+
+    <!-- Products Header -->
+    <section class="products-header">
+        <div class="container">
+            <h1>Armbänder</h1>
+            <p>Entdecke unsere handgefertigten Boho-Armbänder</p>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section class="products-section">
+        <div class="container">
+            <!-- Filters -->
+            <div class="products-filters">
+                <div class="filter-group">
+                    <label class="filter-label">Preis</label>
+                    <select class="filter-select price-filter">
+                        <option value="">Alle Preise</option>
+                        <option value="0-20">Unter 20€</option>
+                        <option value="20-40">20€ - 40€</option>
+                        <option value="40-60">40€ - 60€</option>
+                        <option value="60+">Über 60€</option>
+                    </select>
+                </div>
+                
+                <div class="filter-group">
+                    <label class="filter-label">Farbe</label>
+                    <select class="filter-select color-filter">
+                        <option value="">Alle Farben</option>
+                        <option value="gold">Gold</option>
+                        <option value="silber">Silber</option>
+                        <option value="rose-gold">Rose Gold</option>
+                        <option value="bunt">Bunt</option>
+                    </select>
+                </div>
+                
+                <div class="filter-group">
+                    <label class="filter-label">Material</label>
+                    <select class="filter-select material-filter">
+                        <option value="">Alle Materialien</option>
+                        <option value="perlen">Perlen</option>
+                        <option value="leder">Leder</option>
+                        <option value="metall">Metall</option>
+                        <option value="edelsteine">Edelsteine</option>
+                    </select>
+                </div>
+                
+                <div class="filter-group">
+                    <label class="filter-label">Sortierung</label>
+                    <select class="filter-select sort-select">
+                        <option value="name">Name</option>
+                        <option value="price-low">Preis: Niedrig zu Hoch</option>
+                        <option value="price-high">Preis: Hoch zu Niedrig</option>
+                        <option value="rating">Bewertung</option>
+                        <option value="newest">Neueste</option>
+                    </select>
+                </div>
+                
+                <button class="btn btn-outline clear-filters">Filter zurücksetzen</button>
+            </div>
+
+            <!-- Products Toolbar -->
+            <div class="products-toolbar">
+                <div class="products-count">12 Armbänder gefunden</div>
+                <div class="view-toggle">
+                    <button class="view-toggle-btn active" data-view="grid" title="Rasteransicht">⊞</button>
+                    <button class="view-toggle-btn" data-view="list" title="Listenansicht">☰</button>
+                </div>
+            </div>
+
+            <!-- Products Grid -->
+            <div class="products-grid">
+                <!-- Product 1 -->
+                <div class="product-card">
+                    <div class="product-card-image">
+                        <img src="https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?w=300&h=300&fit=crop" alt="Boho Perlen Armband" loading="lazy">
+                        <div class="product-card-badge sale">-20%</div>
+                        <div class="product-card-actions">
+                            <button class="product-card-action add-to-wishlist" data-product-id="1" title="Zur Wunschliste">🤍</button>
+                            <button class="product-card-action quick-view" data-product-id="1" title="Schnellansicht">👁️</button>
+                        </div>
+                    </div>
+                    <div class="product-card-content">
+                        <h3 class="product-card-title">Boho Perlen Armband</h3>
+                        <div class="product-card-price">
+                            <span class="product-card-price-current">29,90 €</span>
+                            <span class="product-card-price-original">39,90 €</span>
+                        </div>
+                        <div class="product-card-rating">
+                            <div class="product-card-stars">★★★★☆</div>
+                            <span class="product-card-reviews">(23)</span>
+                        </div>
+                        <button class="btn btn-primary add-to-cart" data-product-id="1">In den Warenkorb</button>
+                    </div>
+                </div>
+
+                <!-- Product 2 -->
+                <div class="product-card">
+                    <div class="product-card-image">
+                        <img src="https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?w=300&h=300&fit=crop" alt="Goldenes Armband" loading="lazy">
+                        <div class="product-card-actions">
+                            <button class="product-card-action add-to-wishlist" data-product-id="2" title="Zur Wunschliste">🤍</button>
+                            <button class="product-card-action quick-view" data-product-id="2" title="Schnellansicht">👁️</button>
+                        </div>
+                    </div>
+                    <div class="product-card-content">
+                        <h3 class="product-card-title">Goldenes Armband mit Anhänger</h3>
+                        <div class="product-card-price">
+                            <span class="product-card-price-current">45,90 €</span>
+                        </div>
+                        <div class="product-card-rating">
+                            <div class="product-card-stars">★★★★★</div>
+                            <span class="product-card-reviews">(18)</span>
+                        </div>
+                        <button class="btn btn-primary add-to-cart" data-product-id="2">In den Warenkorb</button>
+                    </div>
+                </div>
+
+                <!-- Product 3 -->
+                <div class="product-card">
+                    <div class="product-card-image">
+                        <img src="https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?w=300&h=300&fit=crop" alt="Leder Armband" loading="lazy">
+                        <div class="product-card-actions">
+                            <button class="product-card-action add-to-wishlist" data-product-id="3" title="Zur Wunschliste">🤍</button>
+                            <button class="product-card-action quick-view" data-product-id="3" title="Schnellansicht">👁️</button>
+                        </div>
+                    </div>
+                    <div class="product-card-content">
+                        <h3 class="product-card-title">Leder Armband mit Nieten</h3>
+                        <div class="product-card-price">
+                            <span class="product-card-price-current">24,90 €</span>
+                        </div>
+                        <div class="product-card-rating">
+                            <div class="product-card-stars">★★★★☆</div>
+                            <span class="product-card-reviews">(12)</span>
+                        </div>
+                        <button class="btn btn-primary add-to-cart" data-product-id="3">In den Warenkorb</button>
+                    </div>
+                </div>
+
+                <!-- Product 4 -->
+                <div class="product-card">
+                    <div class="product-card-image">
+                        <img src="https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?w=300&h=300&fit=crop" alt="Edelstein Armband" loading="lazy">
+                        <div class="product-card-badge new">Neu</div>
+                        <div class="product-card-actions">
+                            <button class="product-card-action add-to-wishlist" data-product-id="4" title="Zur Wunschliste">🤍</button>
+                            <button class="product-card-action quick-view" data-product-id="4" title="Schnellansicht">👁️</button>
+                        </div>
+                    </div>
+                    <div class="product-card-content">
+                        <h3 class="product-card-title">Edelstein Armband</h3>
+                        <div class="product-card-price">
+                            <span class="product-card-price-current">59,90 €</span>
+                        </div>
+                        <div class="product-card-rating">
+                            <div class="product-card-stars">★★★★★</div>
+                            <span class="product-card-reviews">(7)</span>
+                        </div>
+                        <button class="btn btn-primary add-to-cart" data-product-id="4">In den Warenkorb</button>
+                    </div>
+                </div>
+
+                <!-- Product 5 -->
+                <div class="product-card">
+                    <div class="product-card-image">
+                        <img src="https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?w=300&h=300&fit=crop" alt="Charm Armband" loading="lazy">
+                        <div class="product-card-actions">
+                            <button class="product-card-action add-to-wishlist" data-product-id="5" title="Zur Wunschliste">🤍</button>
+                            <button class="product-card-action quick-view" data-product-id="5" title="Schnellansicht">👁️</button>
+                        </div>
+                    </div>
+                    <div class="product-card-content">
+                        <h3 class="product-card-title">Charm Armband</h3>
+                        <div class="product-card-price">
+                            <span class="product-card-price-current">34,90 €</span>
+                        </div>
+                        <div class="product-card-rating">
+                            <div class="product-card-stars">★★★★☆</div>
+                            <span class="product-card-reviews">(15)</span>
+                        </div>
+                        <button class="btn btn-primary add-to-cart" data-product-id="5">In den Warenkorb</button>
+                    </div>
+                </div>
+
+                <!-- Product 6 -->
+                <div class="product-card">
+                    <div class="product-card-image">
+                        <img src="https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?w=300&h=300&fit=crop" alt="Farbiges Armband" loading="lazy">
+                        <div class="product-card-actions">
+                            <button class="product-card-action add-to-wishlist" data-product-id="6" title="Zur Wunschliste">🤍</button>
+                            <button class="product-card-action quick-view" data-product-id="6" title="Schnellansicht">👁️</button>
+                        </div>
+                    </div>
+                    <div class="product-card-content">
+                        <h3 class="product-card-title">Farbiges Perlen Armband</h3>
+                        <div class="product-card-price">
+                            <span class="product-card-price-current">19,90 €</span>
+                        </div>
+                        <div class="product-card-rating">
+                            <div class="product-card-stars">★★★★☆</div>
+                            <span class="product-card-reviews">(9)</span>
+                        </div>
+                        <button class="btn btn-primary add-to-cart" data-product-id="6">In den Warenkorb</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Pagination -->
+            <div class="pagination">
+                <a href="#" class="pagination-item disabled">‹</a>
+                <a href="#" class="pagination-item active">1</a>
+                <a href="#" class="pagination-item">2</a>
+                <a href="#" class="pagination-item">3</a>
+                <a href="#" class="pagination-item">›</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Shop</h3>
+                    <ul>
+                        <li><a href="../products/bracelets.html">Armbänder</a></li>
+                        <li><a href="../products/necklaces.html">Ketten</a></li>
+                        <li><a href="../products/anklets.html">Fußkettchen</a></li>
+                        <li><a href="../products/fashion-jewelry.html">Modeschmuck</a></li>
+                        <li><a href="../products/bags.html">Taschen</a></li>
+                        <li><a href="../products/sale.html">SALE</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Service</h3>
+                    <ul>
+                        <li><a href="../shipping.html">Versand</a></li>
+                        <li><a href="../returns.html">Rückgabe</a></li>
+                        <li><a href="../size-guide.html">Größentabelle</a></li>
+                        <li><a href="../contact.html">Kontakt</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Unternehmen</h3>
+                    <ul>
+                        <li><a href="../about.html">Über uns</a></li>
+                        <li><a href="../blog.html">Blog</a></li>
+                        <li><a href="../privacy.html">Datenschutz</a></li>
+                        <li><a href="../terms.html">Impressum</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Newsletter</h3>
+                    <p>Bleibe auf dem Laufenden über neue Kollektionen und exklusive Angebote.</p>
+                    <form class="newsletter-form" data-validate>
+                        <input type="email" name="email" placeholder="E-Mail-Adresse" class="form-control" required>
+                        <button type="submit" class="btn btn-primary btn-sm" style="width: 100%; margin-top: 0.5rem;">Anmelden</button>
+                    </form>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Casa-Petrada. Alle Rechte vorbehalten.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Cookie Banner -->
+    <div class="cookie-banner">
+        <div class="cookie-left">
+            <span>Lass dir nichts entgehen!</span>
+            <button class="cookie-close">&times;</button>
+        </div>
+        <div class="cookie-center">
+            <p>Diese Website verwendet Cookies, um dir das beste Erlebnis zu bieten. <a href="../privacy.html">Datenschutz</a> | <a href="../terms.html">Impressum</a></p>
+        </div>
+        <div class="cookie-right">
+            <button class="cookie-btn decline" onclick="declineCookies()">Ablehnen</button>
+            <button class="cookie-btn accept" onclick="acceptCookies()">Annehmen</button>
+        </div>
+    </div>
+
+    <!-- Back to Top Button -->
+    <button class="back-to-top" title="Nach oben">↑</button>
+
+    <!-- Scripts -->
+    <script src="../assets/js/main.js"></script>
+    <script src="../assets/js/cart.js"></script>
+    <script src="../assets/js/products.js"></script>
+    <script src="../assets/js/form-validation.js"></script>
+</body>
+</html>

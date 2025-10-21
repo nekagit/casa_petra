@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Warenkorb | Casa-Petrada</title>
+    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="assets/css/components.css">
+    <link rel="stylesheet" href="assets/css/pages.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Top Banner -->
+    <div class="top-banner">
+        <p>Versandkostenfrei ab einem Bestellwert von 39,90 €</p>
+    </div>
+
+    <!-- Header -->
+    <header class="main-header">
+        <div class="container">
+            <div class="header-content">
+                <!-- Logo -->
+                <div class="logo">
+                    <div class="logo-crown">👑</div>
+                    <h1>CASA-PETRADA</h1>
+                    <p class="tagline">MODE & ACCESSOIRES</p>
+                </div>
+
+                <!-- Navigation -->
+                <nav class="main-nav">
+                    <ul>
+                        <li><a href="products/bracelets.html">Armbänder</a></li>
+                        <li><a href="products/necklaces.html">Ketten</a></li>
+                        <li><a href="products/anklets.html">Fußkettchen</a></li>
+                        <li><a href="products/fashion-jewelry.html">Modeschmuck</a></li>
+                        <li><a href="products/fashion.html">Fashion</a></li>
+                        <li><a href="products/bags.html">Taschen</a></li>
+                        <li><a href="products/sale.html">SALE</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="about.html">Über mich</a></li>
+                    </ul>
+                </nav>
+
+                <!-- Header Icons -->
+                <div class="header-icons">
+                    <button class="icon-btn search-btn" title="Suchen">🔍</button>
+                    <button class="icon-btn user-btn" title="Benutzerkonto">👤</button>
+                    <button class="icon-btn cart-btn" title="Warenkorb">
+                        🛍️
+                        <span class="cart-count">0</span>
+                    </button>
+                </div>
+
+                <!-- Mobile Menu Toggle -->
+                <button class="mobile-menu-toggle">☰</button>
+            </div>
+
+            <!-- Mobile Menu -->
+            <div class="mobile-menu">
+                <ul>
+                    <li><a href="products/bracelets.html">Armbänder</a></li>
+                    <li><a href="products/necklaces.html">Ketten</a></li>
+                    <li><a href="products/anklets.html">Fußkettchen</a></li>
+                    <li><a href="products/fashion-jewelry.html">Modeschmuck</a></li>
+                    <li><a href="products/fashion.html">Fashion</a></li>
+                    <li><a href="products/bags.html">Taschen</a></li>
+                    <li><a href="products/sale.html">SALE</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="about.html">Über mich</a></li>
+                </ul>
+            </div>
+        </div>
+    </header>
+
+    <!-- Breadcrumb -->
+    <div class="container">
+        <nav class="breadcrumb">
+            <div class="breadcrumb-item"><a href="index.html">Start</a></div>
+            <div class="breadcrumb-item active">Warenkorb</div>
+        </nav>
+    </div>
+
+    <!-- Cart Page -->
+    <section class="cart-page">
+        <div class="container">
+            <div class="row">
+                <div class="col" style="flex: 2;">
+                    <h1>Warenkorb</h1>
+                    
+                    <!-- Empty Cart Message -->
+                    <div class="empty-cart" style="display: none;">
+                        <div class="text-center">
+                            <h2>Ihr Warenkorb ist leer</h2>
+                            <p>Entdecken Sie unsere schönen Produkte und fügen Sie etwas zu Ihrem Warenkorb hinzu.</p>
+                            <a href="products/sale.html" class="btn btn-primary btn-lg">Jetzt einkaufen</a>
+                        </div>
+                    </div>
+
+                    <!-- Cart Items -->
+                    <div class="cart-items">
+                        <!-- Cart items will be populated by JavaScript -->
+                    </div>
+                </div>
+
+                <!-- Cart Summary -->
+                <div class="col" style="flex: 1;">
+                    <div class="cart-summary">
+                        <h3>Bestellübersicht</h3>
+                        <div class="cart-summary-row">
+                            <span>Zwischensumme</span>
+                            <span>0,00 €</span>
+                        </div>
+                        <div class="cart-summary-row">
+                            <span>Versand</span>
+                            <span>4,90 €</span>
+                        </div>
+                        <div class="cart-summary-total">
+                            <span>Gesamt</span>
+                            <span>4,90 €</span>
+                        </div>
+                        <button class="btn btn-primary btn-lg" style="width: 100%; margin-top: 1rem;" onclick="proceedToCheckout()">
+                            Zur Kasse
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Shop</h3>
+                    <ul>
+                        <li><a href="products/bracelets.html">Armbänder</a></li>
+                        <li><a href="products/necklaces.html">Ketten</a></li>
+                        <li><a href="products/anklets.html">Fußkettchen</a></li>
+                        <li><a href="products/fashion-jewelry.html">Modeschmuck</a></li>
+                        <li><a href="products/bags.html">Taschen</a></li>
+                        <li><a href="products/sale.html">SALE</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Service</h3>
+                    <ul>
+                        <li><a href="shipping.html">Versand</a></li>
+                        <li><a href="returns.html">Rückgabe</a></li>
+                        <li><a href="size-guide.html">Größentabelle</a></li>
+                        <li><a href="contact.html">Kontakt</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Unternehmen</h3>
+                    <ul>
+                        <li><a href="about.html">Über uns</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="privacy.html">Datenschutz</a></li>
+                        <li><a href="terms.html">Impressum</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Newsletter</h3>
+                    <p>Bleibe auf dem Laufenden über neue Kollektionen und exklusive Angebote.</p>
+                    <form class="newsletter-form" data-validate>
+                        <input type="email" name="email" placeholder="E-Mail-Adresse" class="form-control" required>
+                        <button type="submit" class="btn btn-primary btn-sm" style="width: 100%; margin-top: 0.5rem;">Anmelden</button>
+                    </form>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Casa-Petrada. Alle Rechte vorbehalten.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Cookie Banner -->
+    <div class="cookie-banner">
+        <div class="cookie-left">
+            <span>Lass dir nichts entgehen!</span>
+            <button class="cookie-close">&times;</button>
+        </div>
+        <div class="cookie-center">
+            <p>Diese Website verwendet Cookies, um dir das beste Erlebnis zu bieten. <a href="privacy.html">Datenschutz</a> | <a href="terms.html">Impressum</a></p>
+        </div>
+        <div class="cookie-right">
+            <button class="cookie-btn decline" onclick="declineCookies()">Ablehnen</button>
+            <button class="cookie-btn accept" onclick="acceptCookies()">Annehmen</button>
+        </div>
+    </div>
+
+    <!-- Back to Top Button -->
+    <button class="back-to-top" title="Nach oben">↑</button>
+
+    <!-- Scripts -->
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/cart.js"></script>
+    <script src="assets/js/products.js"></script>
+    <script src="assets/js/form-validation.js"></script>
+</body>
+</html>
