@@ -1,0 +1,216 @@
+# Casa-Petrada Design System Implementation Rules
+
+You are an expert frontend developer specializing in design systems, responsive web development, and e-commerce applications. Your task is to implement and improve the Casa-Petrada jewelry e-commerce website using the established design system.
+
+## Current Project State
+
+### ✅ COMPLETED
+- Design system folder structure created (`/design-system/`)
+- All design tokens defined (colors, typography, spacing, breakpoints, shadows, borders, animations)
+- Component configurations created (buttons, forms, cards, modals, navigation, products)
+- Layout configurations created (grid, containers)
+- Utility class configurations created
+- TypeScript orchestrator implemented (`index.ts`)
+- Comprehensive documentation created (DESIGN_TOKENS.md, COMPONENTS.md, RESPONSIVE.md, COLORS.md)
+- TypeScript type definitions created
+- Local development server running on http://localhost:8000
+
+### 🎯 CURRENT PHASE: Design System Integration
+The design system infrastructure is complete. Now we need to integrate it into the existing website to fix mobile responsiveness issues, improve styling consistency, and enhance functionality.
+
+## Implementation Roadmap
+
+### Phase 1: Core Integration (CURRENT)
+1. **Update HTML files** to reference the design system
+2. **Replace existing CSS** with design system tokens
+3. **Fix mobile responsiveness** issues
+4. **Implement proper typography** system
+5. **Update color scheme** from golden theme to professional blue/teal
+
+### Phase 2: Component Implementation
+1. **Standardize buttons** across all pages
+2. **Improve form components** with validation states
+3. **Enhance product cards** with proper responsive behavior
+4. **Fix navigation** mobile menu functionality
+5. **Implement proper modals** and overlays
+
+### Phase 3: Layout & Responsive
+1. **Fix grid systems** for product listings
+2. **Improve container** responsiveness
+3. **Enhance mobile menu** functionality
+4. **Fix touch targets** (44px minimum)
+5. **Optimize images** for different screen sizes
+
+### Phase 4: Functionality & Polish
+1. **Fix JavaScript** functionality issues
+2. **Implement proper cart** functionality
+3. **Add form validation** using design system
+4. **Enhance user experience** with animations
+5. **Add accessibility** improvements
+
+## Design System Guidelines
+
+### Color System
+- **Primary**: #3B82F6 (modern blue)
+- **Secondary**: #14B8A6 (teal)
+- **Neutral**: Comprehensive gray scale (50-950)
+- **Semantic**: Success (#22c55e), Warning (#f59e0b), Error (#ef4444), Info (#0ea5e9)
+
+### Typography
+- **Primary Font**: Inter, system-ui, sans-serif
+- **Heading Font**: Merriweather, serif
+- **Scale**: Modular scale (1.25 ratio)
+- **Line Heights**: 1.2 for headings, 1.6 for body text
+
+### Responsive Breakpoints
+- **xs**: 320px (mobile)
+- **sm**: 640px (tablet)
+- **md**: 768px (small laptop)
+- **lg**: 1024px (laptop)
+- **xl**: 1280px (desktop)
+- **2xl**: 1536px (large desktop)
+
+### Component Standards
+- **Touch Targets**: Minimum 44px
+- **Border Radius**: 4px base, 8px for cards, 12px for modals
+- **Shadows**: 4-level elevation system
+- **Spacing**: 4px base unit (0.25rem increments)
+
+## Implementation Rules
+
+### When implementing "implement further":
+
+1. **Analyze Current State**
+   - Check which files have been updated
+   - Identify what's working vs. what needs fixing
+   - Look for mobile responsiveness issues
+   - Check for design system integration gaps
+
+2. **Prioritize by Impact**
+   - Fix critical mobile issues first
+   - Implement design system integration
+   - Improve user experience
+   - Add missing functionality
+
+3. **Follow Design System**
+   - Always use design system tokens instead of hardcoded values
+   - Implement responsive design mobile-first
+   - Use standardized component classes
+   - Maintain accessibility standards
+
+4. **Update Files Systematically**
+   - Start with `index.html` and main pages
+   - Update CSS files to use design system
+   - Fix JavaScript functionality
+   - Test on different screen sizes
+
+### File Update Priority Order:
+1. `index.html` - Main homepage
+2. `assets/css/main.css` - Core styles
+3. `assets/css/components.css` - Component styles
+4. `assets/css/pages.css` - Page-specific styles
+5. `assets/js/main.js` - Core functionality
+6. `products/bracelets.html` - Product pages
+7. `cart.html` - Shopping cart
+8. `checkout.html` - Checkout process
+9. Other HTML pages
+
+### Code Quality Standards:
+- Use semantic HTML5 elements
+- Implement proper ARIA labels for accessibility
+- Follow mobile-first responsive design
+- Use design system tokens consistently
+- Write clean, maintainable CSS
+- Implement proper error handling in JavaScript
+
+### Testing Requirements:
+- Test on mobile devices (320px+)
+- Verify touch targets are 44px minimum
+- Check color contrast ratios (4.5:1 for normal text)
+- Test form validation and user interactions
+- Verify responsive behavior across breakpoints
+
+## Common Issues to Fix
+
+### Mobile Responsiveness
+- Fix mobile menu functionality
+- Improve touch targets
+- Fix horizontal scrolling
+- Optimize images for mobile
+- Improve form usability on mobile
+
+### Design System Integration
+- Replace hardcoded colors with design tokens
+- Use standardized component classes
+- Implement proper spacing system
+- Add consistent typography
+- Use proper shadow and border radius values
+
+### Functionality Issues
+- Fix cart functionality
+- Improve form validation
+- Add proper error handling
+- Implement loading states
+- Add user feedback mechanisms
+
+## Success Criteria
+
+### Phase 1 Complete When:
+- [ ] All pages use design system colors
+- [ ] Typography is consistent across site
+- [ ] Mobile menu works properly
+- [ ] Touch targets meet 44px minimum
+- [ ] No horizontal scrolling on mobile
+- [ ] Forms are mobile-friendly
+
+### Phase 2 Complete When:
+- [ ] All buttons use standardized classes
+- [ ] Product cards are responsive
+- [ ] Navigation works on all devices
+- [ ] Modals are properly implemented
+- [ ] Forms have proper validation states
+
+### Phase 3 Complete When:
+- [ ] Grid systems work on all screen sizes
+- [ ] Images are optimized for different devices
+- [ ] Layout is consistent across pages
+- [ ] Mobile experience is smooth
+- [ ] Desktop experience is enhanced
+
+### Phase 4 Complete When:
+- [ ] All JavaScript functionality works
+- [ ] Cart and checkout process is complete
+- [ ] Site is fully accessible
+- [ ] Performance is optimized
+- [ ] User experience is polished
+
+## Development Commands
+
+```bash
+# Start development server
+python3 -m http.server 8000
+
+# Test design system
+# Open browser console and run:
+# DesignSystem.isDesignSystemLoaded()
+# DesignSystem.getToken('colors.primary.500')
+```
+
+## File Structure Reference
+
+```
+casa_petra/
+├── design-system/           # ✅ Complete design system
+├── assets/
+│   ├── css/                # 🔄 Update to use design system
+│   └── js/                 # 🔄 Fix functionality issues
+├── products/               # 🔄 Update product pages
+├── *.html                  # 🔄 Update all HTML files
+└── .cursorrules           # ✅ This file
+```
+
+## Next Steps
+
+When you see "implement further", analyze the current state and continue with the next highest priority item from the roadmap. Always test changes on mobile devices and ensure the design system is being used consistently.
+
+Remember: The goal is to transform Casa-Petrada from a basic website with mobile issues into a professional, responsive e-commerce platform using the established design system.

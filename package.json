@@ -1,0 +1,69 @@
+{
+  "name": "casa-petrada",
+  "version": "1.0.0",
+  "description": "Premium handcrafted jewelry e-commerce website with modern design system",
+  "main": "index.html",
+  "scripts": {
+    "start": "python3 -m http.server 8000",
+    "dev": "python3 -m http.server 8000",
+    "build": "node build.js",
+    "serve": "python3 -m http.server 8000 -d dist",
+    "test": "echo 'No tests specified' && exit 0",
+    "lint": "echo 'No linter configured' && exit 0"
+  },
+  "keywords": [
+    "jewelry",
+    "e-commerce",
+    "handcrafted",
+    "design-system",
+    "responsive",
+    "accessibility",
+    "performance"
+  ],
+  "author": "Casa-Petrada",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/casa-petrada/website.git"
+  },
+  "bugs": {
+    "url": "https://github.com/casa-petrada/website/issues"
+  },
+  "homepage": "https://casa-petrada.com",
+  "engines": {
+    "node": ">=14.0.0"
+  },
+  "devDependencies": {},
+  "dependencies": {},
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not dead",
+    "not ie 11"
+  ],
+  "features": [
+    "Design System Integration",
+    "Responsive Design (Mobile-First)",
+    "Accessibility (WCAG 2.1 AA)",
+    "Performance Optimized",
+    "SEO Optimized",
+    "Progressive Enhancement",
+    "Modern JavaScript (ES6+)",
+    "CSS Grid & Flexbox",
+    "Intersection Observer API",
+    "Service Worker Ready"
+  ],
+  "performance": {
+    "lighthouse": {
+      "performance": ">90",
+      "accessibility": ">95",
+      "best-practices": ">90",
+      "seo": ">90"
+    },
+    "core-web-vitals": {
+      "lcp": "<2.5s",
+      "fid": "<100ms",
+      "cls": "<0.1"
+    }
+  }
+}

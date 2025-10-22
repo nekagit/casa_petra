@@ -54,26 +54,92 @@ function initializeFormValidation() {
     });
 }
 
-// Initialize individual form
+// Initialize individual form - Enhanced with Design System
 function initializeForm(form) {
     const inputs = form.querySelectorAll('input, textarea, select');
     
     inputs.forEach(input => {
-        // Add event listeners
+        // Add event listeners with design system integration
         input.addEventListener('blur', () => validateField(input));
         input.addEventListener('input', () => clearFieldError(input));
         input.addEventListener('change', () => validateField(input));
+        input.addEventListener('focus', () => clearFieldError(input));
+        
+        // Add loading state for async validation
+        if (input.dataset.validateAsync) {
+            input.addEventListener('input', debounce(() => {
+                validateFieldAsync(input);
+            }, 500));
+        }
     });
     
-    // Form submission
+    // Enhanced form submission with loading states
     form.addEventListener('submit', (e) => {
+        const submitButton = form.querySelector('button[type="submit"]');
+        
         if (!validateForm(form)) {
             e.preventDefault();
+            
+            // Focus first invalid field with smooth scroll
+            const firstInvalid = form.querySelector('.is-invalid');
+            if (firstInvalid) {
+                firstInvalid.focus();
+                firstInvalid.scrollIntoView({ 
+                    behavior: 'smooth', 
+                    block: 'center' 
+                });
+            }
+        } else {
+            // Add loading state to submit button
+            if (submitButton) {
+                submitButton.classList.add('btn-loading');
+                submitButton.disabled = true;
+            }
         }
     });
 }
 
-// Validate single field
+// Utility function for debouncing
+function debounce(func, wait) {
+    let timeout;
+    return function executedFunction(...args) {
+        const later = () => {
+            clearTimeout(timeout);
+            func(...args);
+        };
+        clearTimeout(timeout);
+        timeout = setTimeout(later, wait);
+    };
+}
+
+// Async field validation
+function validateFieldAsync(field) {
+    const value = field.value.trim();
+    const asyncRule = field.dataset.validateAsync;
+    
+    if (!value || !asyncRule) return;
+    
+    // Add loading state
+    field.classList.add('validating');
+    
+    // Simulate async validation (replace with actual API call)
+    setTimeout(() => {
+        field.classList.remove('validating');
+        
+        // Example async validation
+        if (asyncRule === 'email' && value.includes('@')) {
+            // Simulate email availability check
+            const isAvailable = Math.random() > 0.3; // 70% chance of being available
+            if (!isAvailable) {
+                showFieldError(field, 'Diese E-Mail-Adresse ist bereits registriert');
+            } else {
+                clearFieldError(field);
+            }
+        }
+    }, 1000);
+}
+
+// Validate single field - Enhanced with Design System
 function validateField(field) {
     const rules = getFieldRules(field);
     const value = field.value.trim();
@@ -217,8 +283,16 @@ function getCustomValidationRules(ruleName) {
 
 // Show field error
 function showFieldError(field, message) {
+    // Enhanced error state with design system
     field.classList.add('is-invalid');
-    field.classList.remove('is-valid');
+    field.classList.remove('is-valid', 'validating');
+    
+    // Update form group state
+    const formGroup = field.closest('.form-group');
+    if (formGroup) {
+        formGroup.classList.add('has-error');
+        formGroup.classList.remove('has-success');
+    }
     
     // Remove existing error message
     const existingError = field.parentNode.querySelector('.form-error');
@@ -226,23 +300,48 @@ function showFieldError(field, message) {
         existingError.remove();
     }
     
-    // Create error message
+    // Create enhanced error message with design system
     const errorElement = document.createElement('div');
     errorElement.className = 'form-error';
     errorElement.textContent = message;
+    errorElement.setAttribute('role', 'alert');
+    errorElement.setAttribute('aria-live', 'polite');
     
-    // Insert after field
+    // Add unique ID for ARIA
+    const errorId = 'error-' + Date.now() + '-' + Math.random().toString(36).substr(2, 9);
+    errorElement.id = errorId;
+    
+    // Insert after field with smooth animation
     field.parentNode.insertBefore(errorElement, field.nextSibling);
+    
+    // Animate error message appearance
+    errorElement.style.opacity = '0';
+    errorElement.style.transform = 'translateY(-10px)';
+    requestAnimationFrame(() => {
+        errorElement.style.transition = 'all 0.3s ease';
+        errorElement.style.opacity = '1';
+        errorElement.style.transform = 'translateY(0)';
+    });
     
     // Add ARIA attributes
     field.setAttribute('aria-invalid', 'true');
-    field.setAttribute('aria-describedby', errorElement.id || (errorElement.id = 'error-' + Date.now()));
+    field.setAttribute('aria-describedby', errorId);
+    
+    // Add focus to field for better UX
+    field.focus();
 }
 
-// Show field success
+// Show field success - Enhanced with Design System
 function showFieldSuccess(field) {
     field.classList.add('is-valid');
-    field.classList.remove('is-invalid');
+    field.classList.remove('is-invalid', 'validating');
+    
+    // Update form group state
+    const formGroup = field.closest('.form-group');
+    if (formGroup) {
+        formGroup.classList.add('has-success');
+        formGroup.classList.remove('has-error');
+    }
     
     // Remove error message
     const errorElement = field.parentNode.querySelector('.form-error');
@@ -253,17 +352,39 @@ function showFieldSuccess(field) {
     // Add ARIA attributes
     field.setAttribute('aria-invalid', 'false');
     field.removeAttribute('aria-describedby');
+    
+    // Add subtle success animation
+    field.style.transform = 'scale(1.02)';
+    setTimeout(() => {
+        field.style.transform = 'scale(1)';
+    }, 150);
 }
 
-// Clear field error
+// Clear field error - Enhanced with Design System
 function clearFieldError(field) {
-    field.classList.remove('is-invalid', 'is-valid');
+    field.classList.remove('is-invalid', 'is-valid', 'validating');
     
-    const errorElement = field.parentNode.querySelector('.form-error');
-    if (errorElement) {
-        errorElement.remove();
+    // Update form group state
+    const formGroup = field.closest('.form-group');
+    if (formGroup) {
+        formGroup.classList.remove('has-error', 'has-success');
     }
     
+    // Remove error message with animation
+    const errorElement = field.parentNode.querySelector('.form-error');
+    if (errorElement) {
+        errorElement.style.transition = 'all 0.3s ease';
+        errorElement.style.opacity = '0';
+        errorElement.style.transform = 'translateY(-10px)';
+        
+        setTimeout(() => {
+            if (errorElement.parentNode) {
+                errorElement.remove();
+            }
+        }, 300);
+    }
+    
+    // Clear ARIA attributes
     field.removeAttribute('aria-invalid');
     field.removeAttribute('aria-describedby');
 }

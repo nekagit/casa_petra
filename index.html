@@ -3,11 +3,78 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Boho Schmuck & Kleider | Casa-Petrada</title>
+    <title>Boho Schmuck & Kleider | Casa-Petrada - Premium Handcrafted Jewelry</title>
+    <meta name="description" content="Entdecken Sie unsere exquisite Kollektion handgefertigter Schmuckstücke inklusive Armbänder, Ketten und Modeaccessoires. Premium Qualität bei Casa-Petrada. Versandkostenfrei ab 39,90€.">
+    <meta name="keywords" content="Schmuck, handgefertigter Schmuck, Armbänder, Ketten, Modeaccessoires, Premium Schmuck, Casa-Petrada, Boho Schmuck, Luxus Schmuck">
+    <meta name="author" content="Casa-Petrada">
+    <meta name="robots" content="index, follow">
+    <meta name="language" content="de">
+    <meta name="revisit-after" content="7 days">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://casa-petrada.com/">
+    <meta property="og:title" content="Boho Schmuck & Kleider | Casa-Petrada">
+    <meta property="og:description" content="Entdecken Sie unsere exquisite Kollektion handgefertigter Schmuckstücke inklusive Armbänder, Ketten und Modeaccessoires. Premium Qualität bei Casa-Petrada.">
+    <meta property="og:image" content="https://casa-petrada.com/assets/images/og-image.jpg">
+    <meta property="og:site_name" content="Casa-Petrada">
+    <meta property="og:locale" content="de_DE">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://casa-petrada.com/">
+    <meta property="twitter:title" content="Boho Schmuck & Kleider | Casa-Petrada">
+    <meta property="twitter:description" content="Entdecken Sie unsere exquisite Kollektion handgefertigter Schmuckstücke inklusive Armbänder, Ketten und Modeaccessoires. Premium Qualität bei Casa-Petrada.">
+    <meta property="twitter:image" content="https://casa-petrada.com/assets/images/og-image.jpg">
+    
+    <!-- Additional SEO -->
+    <meta name="theme-color" content="#3B82F6">
+    <meta name="msapplication-TileColor" content="#3B82F6">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <meta name="apple-mobile-web-app-title" content="Casa-Petrada">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://casa-petrada.com/">
+    
+    <!-- Preconnect to external domains -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    
+    <!-- Stylesheets -->
     <link rel="stylesheet" href="assets/css/main.css">
     <link rel="stylesheet" href="assets/css/components.css">
     <link rel="stylesheet" href="assets/css/pages.css">
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
+    
+    <!-- Design System -->
+    <script type="module" src="design-system/index.ts"></script>
+    
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "Casa-Petrada",
+        "url": "https://casa-petrada.com",
+        "logo": "https://casa-petrada.com/assets/images/logo.png",
+        "description": "Premium handgefertigter Schmuck Kollektion inklusive Armbänder, Ketten und Modeaccessoires.",
+        "address": {
+            "@type": "PostalAddress",
+            "addressCountry": "DE"
+        },
+        "contactPoint": {
+            "@type": "ContactPoint",
+            "telephone": "+49-123-456-7890",
+            "contactType": "customer service"
+        },
+        "sameAs": [
+            "https://www.facebook.com/casapetrada",
+            "https://www.instagram.com/casapetrada",
+            "https://www.pinterest.com/casapetrada"
+        ]
+    }
+    </script>
 </head>
 <body>
     <!-- Top Banner -->
@@ -43,7 +110,7 @@
 
                 <!-- Header Icons -->
                 <div class="header-icons">
-                    <button class="icon-btn search-btn" title="Suchen">🔍</button>
+                    <button class="icon-btn search-btn" id="search-toggle" title="Suchen" aria-label="Open search">🔍</button>
                     <button class="icon-btn user-btn" title="Benutzerkonto">👤</button>
                     <button class="icon-btn cart-btn" title="Warenkorb">
                         🛍️
@@ -52,11 +119,11 @@
                 </div>
 
                 <!-- Mobile Menu Toggle -->
-                <button class="mobile-menu-toggle">☰</button>
+                <button class="mobile-menu-toggle" aria-expanded="false" aria-label="Open navigation menu" aria-controls="mobile-menu">☰</button>
             </div>
 
             <!-- Mobile Menu -->
-            <div class="mobile-menu">
+            <div class="mobile-menu" id="mobile-menu" role="navigation" aria-label="Mobile navigation">
                 <ul>
                     <li><a href="products/bracelets.html">Armbänder</a></li>
                     <li><a href="products/necklaces.html">Ketten</a></li>
@@ -345,6 +412,58 @@
     <button class="back-to-top" title="Nach oben">↑</button>
 
     <!-- Scripts -->
+    <!-- Advanced Search Modal -->
+    <div class="modal-overlay" id="searchModal">
+        <div class="modal modal-lg">
+            <div class="modal-header">
+                <h3>Produktsuche</h3>
+                <button class="modal-close" id="closeSearchModal">&times;</button>
+            </div>
+            <div class="modal-body">
+                <div class="search-container">
+                    <div class="search-input-group">
+                        <input type="text" id="advanced-search-input" placeholder="Produktname, Kategorie oder Beschreibung..." autocomplete="off">
+                        <button type="button" id="search-submit" class="btn btn-primary">Suchen</button>
+                    </div>
+                    <div class="search-filters">
+                        <div class="filter-group">
+                            <label for="category-filter">Kategorie:</label>
+                            <select id="category-filter">
+                                <option value="">Alle Kategorien</option>
+                                <option value="armbänder">Armbänder</option>
+                                <option value="ketten">Ketten</option>
+                                <option value="fußkettchen">Fußkettchen</option>
+                                <option value="modeschmuck">Modeschmuck</option>
+                            </select>
+                        </div>
+                        <div class="filter-group">
+                            <label for="price-range">Preisbereich:</label>
+                            <select id="price-range">
+                                <option value="">Alle Preise</option>
+                                <option value="0-50">0 - 50€</option>
+                                <option value="50-100">50 - 100€</option>
+                                <option value="100-200">100 - 200€</option>
+                                <option value="200+">200€+</option>
+                            </select>
+                        </div>
+                        <div class="filter-group">
+                            <label for="sort-by">Sortieren nach:</label>
+                            <select id="sort-by">
+                                <option value="relevance">Relevanz</option>
+                                <option value="price-low">Preis: Niedrig zu Hoch</option>
+                                <option value="price-high">Preis: Hoch zu Niedrig</option>
+                                <option value="name">Name A-Z</option>
+                                <option value="newest">Neueste zuerst</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="search-suggestions" id="search-suggestions"></div>
+                    <div class="search-results" id="search-results"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <script src="assets/js/main.js"></script>
     <script src="assets/js/cart.js"></script>
     <script src="assets/js/products.js"></script>
